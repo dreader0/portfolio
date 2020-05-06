@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
+import About from './components/About/About';
+import Projects from './components/Projects/Projects';
+import WorkTerms from './components/WorkTerms/WorkTerms';
+import Home from './components/Home/Home';
 import './App.css';
 
 const particlesOptions = {
@@ -15,14 +19,14 @@ const particlesOptions = {
     },
     "line_linked": {
         "enable": true,
-        "opacity": 0.02
+        "opacity": 0.08
     },
     "move": {
         "direction": "right",
-        "speed": 0.05
+        "speed": 0.15
     },
     "size": {
-        "value": 2
+        "value": 3
     },
     "opacity": {
         "anim": {
@@ -77,15 +81,15 @@ class App extends Component{
         </div>
         {
           route === 'about' ?
-            <div><p className='f3 link dim white pa3 pointer'>About Me</p></div>
+            <div><About /></div>
             : ( route === 'projects' ?
-              <div><p className='f3 link dim white pa3 pointer'>Projects</p></div>
+              <div><Projects /></div>
               : (route === 'workterms' ?
-                <div><p className='f3 link dim white pa3 pointer'>Work Terms</p></div>
+                <div><WorkTerms /></div>
                 : (route === 'resume' ?
-                <div><p className='f3 link dim white pa3 pointer'>Resume</p></div>
+                <div>Resume</div>
                 :
-                <div><p className='f3 link dim white pa3 pointer'>Home</p></div>
+                <div><Home /></div>
                 )
               )
             )
