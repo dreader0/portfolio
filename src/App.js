@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
+import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
 import './App.css';
 
@@ -47,21 +48,51 @@ const particlesOptions = {
 "retina_detect": true
 }
 
-class App extends Component{
-  
-  render(){
-      return (
-        <div className = "App" >
-          <Particles 
-            className = 'particles'
-            params={particlesOptions} />
-          <div>
-          <Logo />
-          </div>
-        </div>
-      );
-  };
+const initialState = {
+  route: 'home'
+}
 
+class App extends Component{
+  constructor() {
+    super()
+    this.state = initialState;
+  }
+
+  onRouteChange = (route) => {
+    this.setState({
+      route: route
+    })
+  }
+
+  render() {
+    const { route } = this.state;
+    return (
+      <div className = "App" >
+        <Particles 
+          className = 'particles'
+          params={particlesOptions} />
+        <div className='center navbarspace'>
+          <Logo onRouteChange={this.onRouteChange} />
+          <Navigation onRouteChange={this.onRouteChange} />
+        </div>
+        {
+          route === 'about' ?
+            <div><p className='f3 link dim white pa3 pointer'>About Me</p></div>
+            : ( route === 'projects' ?
+              <div><p className='f3 link dim white pa3 pointer'>Projects</p></div>
+              : (route === 'workterms' ?
+                <div><p className='f3 link dim white pa3 pointer'>Work Terms</p></div>
+                : (route === 'resume' ?
+                <div><p className='f3 link dim white pa3 pointer'>Resume</p></div>
+                :
+                <div><p className='f3 link dim white pa3 pointer'>Home</p></div>
+                )
+              )
+            )
+        }
+      </div>
+    );
+  }
 }
 
 export default App;
