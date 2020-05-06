@@ -6,7 +6,11 @@ import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import WorkTerms from './components/WorkTerms/WorkTerms';
 import Home from './components/Home/Home';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 import './App.css';
+
+library.add(fab)
 
 const particlesOptions = {
   "particles": {
@@ -84,7 +88,7 @@ class App extends Component{
         </div>
         {
           route === 'about' ?
-            <div><About /></div>
+            <div className='center'><About /></div>
             : ( route === 'projects' ?
               <div><Projects /></div>
               : (route === 'workterms' ?
