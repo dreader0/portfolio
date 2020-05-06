@@ -10,6 +10,9 @@ import './App.css';
 
 const particlesOptions = {
   "particles": {
+    // "color": {
+    //  "value": "#000"
+    // },
     "number": {
         "value": 60,
         "density": {
