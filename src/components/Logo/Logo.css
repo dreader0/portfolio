@@ -4,4 +4,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: transform 0.5s;
+}
+
+.pic:hover {
+  transform: scale(1.5) translate(5px, 5px);
 }

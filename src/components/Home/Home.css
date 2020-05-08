@@ -1,0 +1,15 @@
+.social {
+  transition: transform .5s;
+}
+
+.social:hover {
+  transform: translateY(-3px);
+}
+
+.homeText {
+  cursor: default;
+}
+
+.homeText:hover {
+  transform: scale(1.01);
+}

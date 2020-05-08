@@ -1,16 +1,19 @@
 import React from 'react';
 import resume from '../Resume/Resume.pdf'
+import Toggle from '../Toggle/Toggle';
+import './Navigation.css'
 
-const Navigation = ({onRouteChange}) => {
+const Navigation = ({onRouteChange, onToggle, theme}) => {
   return (
-    <nav style={{display: 'flex', justifyContent: 'center'}}>
-      <p onClick={() => onRouteChange('about')} className='f4 link dim white ma3 pt0 pointer'>About</p>
-      <p onClick={() => onRouteChange('projects')} className='f4 link dim white ma3 pt0 pointer'>Projects</p>
-      <p onClick={() => onRouteChange('workterms')} className='f4 link dim white ma3 pt0 pointer'>Work Terms</p>
+    <div style={{display: 'flex', justifyContent: 'center'}}nav>
+      <nav onClick={() => onRouteChange('about')} className='f4 ma3 pt0 pointer'>About</nav>
+      <nav onClick={() => onRouteChange('projects')} className='f4 ma3 pt0 pointer'>Projects</nav>
+      <nav onClick={() => onRouteChange('workterms')} className='f4 ma3 pt0 pointer'>Work Terms</nav>
       <p >
-        <a target='blank' className='f4 link dim white ma3 pt0 pointer' href={resume}>Resume</a>
+        <a target='blank' className='f4 link ma3 pt0 pointer' href={resume}>Resume</a>
       </p>
-    </nav>
+      <Toggle onToggle={onToggle} theme={theme}/>
+    </div>
   );
 }
 

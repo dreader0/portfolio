@@ -1,27 +1,35 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
+
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import WorkTerms from './components/WorkTerms/WorkTerms';
 import Home from './components/Home/Home';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from './theme';
+import { GlobalStyles } from './global';
+
 import './App.css';
 
-library.add(fab)
+library.add(fab, fas)
 
 const particlesOptions = {
   "particles": {
-    // "color": {
-    //  "value": "#000"
-    // },
+    "color": {
+     "value": "#fff"
+    },
     "number": {
         "value": 60,
         "density": {
             "enable": true,
-            "value_area": 1500
+            "value_area": 1000
         }
     },
     "line_linked": {
@@ -30,10 +38,10 @@ const particlesOptions = {
     },
     "move": {
         "direction": "right",
-        "speed": 0.15
+        "speed": 0.01
     },
     "size": {
-        "value": 3
+        "value": 1
     },
     "opacity": {
         "anim": {
@@ -60,7 +68,8 @@ const particlesOptions = {
 }
 
 const initialState = {
-  route: 'home'
+  route: 'home',
+  theme: 'dark'
 }
 
 class App extends Component{
@@ -71,36 +80,51 @@ class App extends Component{
 
   onRouteChange = (route) => {
     this.setState({
-      route: route
+      route: route,
     })
   }
 
+  toggleTheme = (theme) => {
+    if (theme === 'light') {
+      this.setState({
+        theme: 'dark'
+      })
+    } else {
+      this.setState({
+        theme: 'light'
+      })
+      particlesOptions.particles.color = '#000000';
+    }
+  }
+
   render() {
-    const { route } = this.state;
+    const { route, theme } = this.state;
     return (
-      <div className = "App" >
+      <div className="App" >
         <Particles 
           className = 'particles'
           params={particlesOptions} />
-        <div className='center navbarspace'>
+        <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+          <GlobalStyles />
+        <div className='center navbarspace mb4'>
           <Logo onRouteChange={this.onRouteChange} />
-          <Navigation onRouteChange={this.onRouteChange} />
-        </div>
-        {
+          <Navigation onRouteChange={this.onRouteChange} onToggle={this.toggleTheme} theme={theme} />
+          </div>
+          <div style={{ display: 'inline-block' }}>
+          {
           route === 'about' ?
             <div className='center'><About /></div>
             : ( route === 'projects' ?
               <div><Projects /></div>
               : (route === 'workterms' ?
                 <div><WorkTerms /></div>
-                : (route === 'resume' ?
-                <div>Resume</div>
                 :
                 <div><Home /></div>
-                )
               )
             )
-        }
+          }
+          </div>
+        </ThemeProvider>
       </div>
     );
   }
