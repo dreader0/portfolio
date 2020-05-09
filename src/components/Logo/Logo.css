@@ -1,6 +1,6 @@
 .pic {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,5 +8,5 @@
 }
 
 .pic:hover {
-  transform: scale(1.5) translate(5px, 5px);
+  transform: scale(1.1) translate(1px, 1px);
 }

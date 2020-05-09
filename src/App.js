@@ -68,7 +68,7 @@ const particlesOptions = {
 }
 
 const initialState = {
-  route: 'workterms',
+  route: 'home',
   theme: 'dark'
 }
 

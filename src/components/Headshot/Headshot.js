@@ -1,5 +1,5 @@
 import React from 'react';
-import headshot from './CamryZoom.jpg'
+import headshot from './Headshot.jpg'
 import './Headshot.css'
 
 const Headshot = () => {
