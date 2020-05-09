@@ -1,12 +1,13 @@
 export const darkTheme = {
   body: '#00001a',
-  text: '#ff8080',
-  accent: '#FAFAFA'
+  text: '#FAFAFA',
+  accent: '#ff8080',
+  bg: '#000031'
 }
 
 export const lightTheme = {
-  body: '#ff9999',
+  body: '#ff6666',
   text: '#00001a',
   accent: '#FAFAFA',
-  logo: './DR_3.svg'
+  bg: '#ff8080'
 }

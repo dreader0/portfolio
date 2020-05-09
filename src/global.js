@@ -25,7 +25,18 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.accent};
   }
 
-  p: {
-    transition: all 0.25s linear;
+  .card {
+    background-color: ${({ theme }) => theme.bg};
+    transition: all .25s linear
+  }
+
+  .abCard {
+    background-color: ${({ theme }) => theme.bg};
+    transition: all .25s linear;
+  }
+
+  .wtCard {
+    background-color: ${({ theme }) => theme.bg};
+    transition: all .25s linear;
   }
   `

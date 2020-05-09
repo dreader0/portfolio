@@ -1,6 +1,4 @@
-p {
-  transition: all 0.25s linear;
-}
+p {}
 
 p:hover {
   color: '#FAFAFA';

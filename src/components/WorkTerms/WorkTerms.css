@@ -1,0 +1,29 @@
+.wtCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  /* 5px rounded corners */
+  width: 90%;
+  display: inline-block;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+/* @media (min-width: 768px) {
+  .wtCard {
+    width: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wtCard {
+    width: 1000px;
+  }
+} */
+
+@media (min-width: 800px) {
+  .wtCard {
+    width: 60%;
+  }
+}

@@ -68,7 +68,7 @@ const particlesOptions = {
 }
 
 const initialState = {
-  route: 'home',
+  route: 'workterms',
   theme: 'dark'
 }
 
@@ -113,7 +113,7 @@ class App extends Component{
           <div style={{ display: 'inline-block' }}>
           {
           route === 'about' ?
-            <div className='center'><About /></div>
+            <div><About /></div>
             : ( route === 'projects' ?
               <div><Projects /></div>
               : (route === 'workterms' ?
