@@ -5,7 +5,7 @@ import './Home.css'
 
 const Home = () => {
   return (
-    <div style={{display: 'inline-block'}}className='mt5'>
+    <div style={{display: 'inline-block'}}className='mt5 homeCard'>
       <Headshot />
       <p className='f2 ma1 mt3'>Daniel Reader</p>
       <p className='f4 mt1'>Co-op Student / Developer</p>

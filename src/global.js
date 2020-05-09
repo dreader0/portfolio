@@ -39,4 +39,11 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.bg};
     transition: all .25s linear;
   }
+
+  .homeCard {
+    background-color: ${({ theme }) => theme.bg};
+    transition: all .25s linear;
+  }
+
+  
   `

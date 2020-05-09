@@ -102,3 +102,32 @@ dist
 
 # TernJS port file
 .tern-port
+build/asset-manifest.json
+build/dRlogo.ico
+build/index.html
+build/logo192.png
+build/logo512.png
+build/manifest.json
+build/precache-manifest.5143b0804477da708d18949d1f095dcf.js
+build/robots.txt
+build/service-worker.js
+build/static/css/2.02b9615e.chunk.css
+build/static/css/2.02b9615e.chunk.css.map
+build/static/css/main.b388ec65.chunk.css
+build/static/css/main.b388ec65.chunk.css.map
+build/static/js/2.0dcf99f7.chunk.js
+build/static/js/2.0dcf99f7.chunk.js.LICENSE.txt
+build/static/js/2.0dcf99f7.chunk.js.map
+build/static/js/main.6b3c348a.chunk.js
+build/static/js/main.6b3c348a.chunk.js.map
+build/static/js/runtime-main.f4f2abbf.js
+build/static/js/runtime-main.f4f2abbf.js.map
+build/static/media/DR_3.408ab118.svg
+build/static/media/Headshot.2dff39ee.jpg
+build/static/media/Resume.a54e129f.pdf
+build/static/media/smartbrian.10c5b73f.png
+build/static/js/main.6c6d8996.chunk.js.map
+build/static/js/main.6c6d8996.chunk.js
+build/static/css/main.9ac0fd13.chunk.css.map
+build/static/css/main.9ac0fd13.chunk.css
+build/precache-manifest.1c56ec10081a07da4f2073d6c2fa5639.js

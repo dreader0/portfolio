@@ -13,3 +13,14 @@
 .homeText:hover {
   transform: scale(1.01);
 }
+
+.homeCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  /* 5px rounded corners */
+  /* margin-left: auto;
+  margin-right: auto; */
+  width: auto;
+  display: inline-block;
+  padding: 25px;
+}
