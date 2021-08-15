@@ -1,7 +1,7 @@
 export const lightTheme = {
   body: '#458545',
   text: '#000000',
-  accent: '#ff8080',
+  accent: '#FFFFFF',
   bg: '#FFFFFF08'
 }
 

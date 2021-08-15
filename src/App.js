@@ -23,56 +23,56 @@ library.add(fab, fas)
 const particlesOptions = {
   "particles": {
     "color": {
-     "value": "#fff"
+      "value": "#fff"
     },
     "number": {
-        "value": 60,
-        "density": {
-            "enable": true,
-            "value_area": 1000
-        }
+      "value": 60,
+      "density": {
+        "enable": true,
+        "value_area": 1000
+      }
     },
     "line_linked": {
-        "enable": false,
-        "opacity": 0.08
+      "enable": false,
+      "opacity": 0.08
     },
     "move": {
-        "direction": "right",
-        "speed": 0.2
+      "direction": "right",
+      "speed": 0.2
     },
     "size": {
-        "value": 1
+      "value": 1
     },
     "opacity": {
-        "anim": {
-            "enable": true,
-            "speed": 1,
-            "opacity_min": 0.05
-        }
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "opacity_min": 0.05
+      }
     }
-},
-"interactivity": {
+  },
+  "interactivity": {
     "events": {
-        "onclick": {
-            "enable": true,
-            "mode": "push"
-        }
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      }
     },
     "modes": {
-        "push": {
-            "particles_nb": 1
-        }
+      "push": {
+        "particles_nb": 1
+      }
     }
-},
-"retina_detect": true
+  },
+  "retina_detect": true
 }
 
 const initialState = {
   route: 'home',
-  theme: 'dark'
+  theme: 'light'
 }
 
-class App extends Component{
+class App extends Component {
   constructor() {
     super()
     this.state = initialState;
@@ -101,28 +101,28 @@ class App extends Component{
     const { route, theme } = this.state;
     return (
       <div className="App" >
-        <Particles 
-          className = 'particles'
+        <Particles
+          className='particles'
           params={particlesOptions} />
         <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
           <GlobalStyles />
-        <div className='center navbarspace mb4'>
-          <Logo onRouteChange={this.onRouteChange} />
-          <Navigation onRouteChange={this.onRouteChange} onToggle={this.toggleTheme} theme={theme} />
+          <div className='center navbarspace mb4'>
+            <Logo onRouteChange={this.onRouteChange} />
+            <Navigation onRouteChange={this.onRouteChange} onToggle={this.toggleTheme} theme={theme} />
           </div>
           <div style={{ display: 'inline-block' }}>
-          {
-          route === 'about' ?
-            <div><About /></div>
-            : ( route === 'projects' ?
-              <div><Projects /></div>
-              : (route === 'workterms' ?
-                <div><WorkTerms /></div>
-                :
-                <div><Home /></div>
-              )
-            )
-          }
+            {
+              route === 'about' ?
+                <div><About /></div>
+                : (route === 'projects' ?
+                  <div><Projects /></div>
+                  : (route === 'workterms' ?
+                    <div><WorkTerms /></div>
+                    :
+                    <div><Home /></div>
+                  )
+                )
+            }
           </div>
         </ThemeProvider>
       </div>
