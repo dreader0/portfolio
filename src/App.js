@@ -33,12 +33,12 @@ const particlesOptions = {
         }
     },
     "line_linked": {
-        "enable": true,
+        "enable": false,
         "opacity": 0.08
     },
     "move": {
         "direction": "right",
-        "speed": 0.01
+        "speed": 0.2
     },
     "size": {
         "value": 1

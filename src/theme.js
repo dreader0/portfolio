@@ -1,13 +1,13 @@
-export const darkTheme = {
-  body: '#00001a',
-  text: '#FAFAFA',
+export const lightTheme = {
+  body: '#458545',
+  text: '#000000',
   accent: '#ff8080',
-  bg: '#000031'
+  bg: '#FFFFFF08'
 }
 
-export const lightTheme = {
-  body: '#ff6666',
-  text: '#00001a',
-  accent: '#FAFAFA',
-  bg: '#ff8080'
+export const darkTheme = {
+  body: '#121212',
+  text: '#FFFFFF',
+  accent: '#458545',
+  bg: '#FFFFFF08'
 }

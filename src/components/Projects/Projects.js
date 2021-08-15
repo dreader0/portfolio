@@ -2,12 +2,21 @@ import React from 'react';
 import './Projects.css'
 import smartbrian from './smartbrian.png'
 import pong from './pong.png'
+import deathroll from './deathroll.png'
 
 const Projects = () => {
   return (
     <div className='pt0'>
       <p className='f2 ma1'>Projects</p>
       <div className='ma0'>
+        <div className='card'>
+          <p className='f4'>deathroll</p>
+          <img className='br2 scrnsht' alt='phaser pong screenshot' src={deathroll} />
+          <p className='f6 desc'>A personal project I've been working on using ReactJS inspired by a video I saw online, that I then learned was likely inspired by something from World of Warcraft. 
+            <br /><br />It's essentially a drinking game similar to King's Cup, except instead of picking cards you press a big red button, and a number is rolled. Whoever rolls a 1 loses.
+            <br /><br /> You can play it <a className='link i' target='blank' href='https://dreader0.github.io/deathroll'>here</a> and the source code is available on my <a className='link i' target='blank' href='https://github.com/dreader0/deathroll'>GitHub</a>, along with all of my other projects.
+          </p>
+        </div>
         <div className='card'>
           <p className='f4'>Smart Brian</p>
           <img className='br2 scrnsht' alt='smart brian screenshot' src={smartbrian} />
