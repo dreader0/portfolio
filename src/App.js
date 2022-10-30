@@ -3,9 +3,9 @@ import Particles from 'react-particles-js';
 
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
-import About from './components/About/About';
-import Projects from './components/Projects/Projects';
-import WorkTerms from './components/WorkTerms/WorkTerms';
+// import About from './components/About/About';
+// import Projects from './components/Projects/Projects';
+// import WorkTerms from './components/WorkTerms/WorkTerms';
 import Home from './components/Home/Home';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -69,7 +69,7 @@ const particlesOptions = {
 
 const initialState = {
   route: 'home',
-  theme: 'light'
+  theme: 'dark'
 }
 
 class App extends Component {
@@ -98,7 +98,7 @@ class App extends Component {
   }
 
   render() {
-    const { route, theme } = this.state;
+    const { /*route,*/ theme } = this.state;
     return (
       <div className="App" >
         <Particles
@@ -111,7 +111,7 @@ class App extends Component {
             <Navigation onRouteChange={this.onRouteChange} onToggle={this.toggleTheme} theme={theme} />
           </div>
           <div style={{ display: 'inline-block' }}>
-            {
+            {/* {
               route === 'about' ?
                 <div><About /></div>
                 : (route === 'projects' ?
@@ -122,7 +122,8 @@ class App extends Component {
                     <div><Home /></div>
                   )
                 )
-            }
+            } */}
+            <div><Home /></div>
           </div>
         </ThemeProvider>
       </div>

@@ -17,7 +17,6 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-particles-js": "^3.2.1",
-    "react-scripts": "4.0.3",
     "react-tilt": "^0.1.4",
     "styled-components": "^5.1.0",
     "styled-theming": "^2.2.0",
@@ -50,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^2.2.0",
+    "react-scripts": "^5.0.1"
   }
 }
