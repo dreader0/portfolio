@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div style={{ display: 'inline-block' }} className='mt5 homeCard'>
       <Headshot />
-      <p className='f2 ma1 mt3'>Daniel Reader</p>
+      <p className='f2 ma1 mt3'>Dan Reader</p>
       <p className='f4 mt1'>Full Stack Developer</p>
       <a target="_blank" rel="noopener noreferrer" href='https://github.com/dreader0'>
         <FontAwesomeIcon className='social f2 pl3 pr3' icon={['fab', 'github']} />
