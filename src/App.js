@@ -110,7 +110,7 @@ class App extends Component {
             <Logo onRouteChange={this.onRouteChange} />
             <Navigation onRouteChange={this.onRouteChange} onToggle={this.toggleTheme} theme={theme} />
           </div>
-          <div style={{ display: 'inline-block' }}>
+          <div>
             {/* {
               route === 'about' ?
                 <div><About /></div>
